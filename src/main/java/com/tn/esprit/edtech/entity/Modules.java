@@ -14,7 +14,7 @@ public class Modules {
     long id_module;
     String nom_module;
     @OneToMany
-    List<cours> Cours;
+    List<Matiere> matiere;
 
     String module_desc;
 }

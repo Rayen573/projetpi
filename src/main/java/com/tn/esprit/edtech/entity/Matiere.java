@@ -8,14 +8,14 @@ import java.util.List;
 
 @Entity
 @Data
-public class cours {
+public class Matiere{
     @Id
     @GeneratedValue
     private long id;
-    private String nomCours;
-    private String descCours;
+    private String nomMatiere;
+    private String descMatiere;
 
-    @OneToMany(mappedBy = "cours")
+    @OneToMany(mappedBy = "matiere")
     private List<Enseignant> enseignants;
 
 

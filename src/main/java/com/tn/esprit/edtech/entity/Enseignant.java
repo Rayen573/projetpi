@@ -19,5 +19,5 @@ public class Enseignant {
 
     private String adresse;
     @ManyToOne
-    private cours cours;
+    private Matiere matiere;
 }
