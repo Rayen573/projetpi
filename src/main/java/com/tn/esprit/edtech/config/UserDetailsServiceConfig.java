@@ -14,9 +14,9 @@ public class UserDetailsServiceConfig {
     public UserDetailsService userDetailsService() {
         // In-memory user details manager with one user
         UserDetails user = User.withDefaultPasswordEncoder()
-                .username("user")
+                .username("email@example.com")
                 .password("password")
-                .roles("USER")
+                .roles("USER","ADMIN")
                 .build();
 
         return new InMemoryUserDetailsManager(user);
