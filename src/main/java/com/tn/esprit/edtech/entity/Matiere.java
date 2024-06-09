@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.List;
+import java.util.Set;
 
 
 @Entity
@@ -15,8 +16,9 @@ public class Matiere{
     private String nomMatiere;
     private String descMatiere;
 
-    @OneToMany(mappedBy = "matiere")
-    private List<Enseignant> enseignants;
+    @OneToMany(mappedBy = "matiere", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Examen> examens;
+
 
 
 
